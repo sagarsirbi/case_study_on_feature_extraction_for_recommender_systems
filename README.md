@@ -17,8 +17,8 @@ This will create a new conda environment called ```my_env``` and install all the
 ## DATASETS
 The datasets used in this project is ```MovieLens-100K``` and ```MovieLens-1M``` obtained from https://grouplens.org/datasets/movielens/
 
-  - [MovieLens-100K](https://github.com/ISG-Siegen/SA_Sagar_Sirbi/tree/main/DATASETS/MOVIELENS%20100K): Dataset used in Machine Learning proposed model
-  - [MovieLens-1M](https://github.com/ISG-Siegen/SA_Sagar_Sirbi/tree/main/DATASETS/MOVIELENS%201M): Dataset used in Deep Learning Neural Network model 
+  - [MovieLens-100K](https://files.grouplens.org/datasets/movielens/ml-100k.zip): Dataset used in Machine Learning proposed model
+  - [MovieLens-1M](https://files.grouplens.org/datasets/movielens/ml-1m.zip): Dataset used in Deep Learning Neural Network model 
 
 ## DATA PREPARATION 
 Proposed Deep Learning Model utilizes users and items data. The corresponding data prepared pickle file for downloads can be found here:
