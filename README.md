@@ -38,7 +38,7 @@ feature_extraction_in_recommender_systems/
 │   ├── collaborative_filtering/
 │   ├── autoencoder_collaborative_filtering/
 │   └── module/
-├── FINAL_REPORT.pdf
+├── final_report.pdf
 ├── requirements.txt
 ├── README.md
 ```
