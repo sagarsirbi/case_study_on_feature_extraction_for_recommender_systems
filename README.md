@@ -1,45 +1,89 @@
-# Case Study on Feature Extraction for Recommender Systems
+# Feature Extraction in Recommender Systems
 
-![FRNVGggUYAEg5MA](https://user-images.githubusercontent.com/89741376/218879722-22e4d3b6-c86c-4e44-a0c6-571eb9a7019a.jpg)
+![Recommender Systems](https://user-images.githubusercontent.com/89741376/218879722-22e4d3b6-c86c-4e44-a0c6-571eb9a7019a.jpg)
 *Reference: https://www.updatepedia.com/top-05-upcoming-movies-in-2021/*
-# Introduction
-With the explosive growth of online information, users are generally provided without endless movies, products and services. As a result, recommender systems have come to rescue and posses effective strategy to overcome such information load. The influence of deep learning has been revolutionizing over the decade in the area of recommender systems and brings in a number of opportunities to improve the performance of the recommender. Moreover, the influence of feature extraction techniques in recommender systems is not very well documented. Hence, this project focus on the survey of state-of-the-art feature extraction techniques currently implemented in recommender systems. More concretely, we implement feature extraction techniques using an autoencoder for a deep neural network predictive model and a hybrid approach for feature extraction using a machine learning predictive model. We evaluate these models against the baseline model, derived from traditional structured dataset, being fed into the model. Furthermore, we demonstrate our models performance of two different datasets of varying sparsity, namely Movielens100k and Movielens1M. Lastly, we evaluate our models performance using Root metrics Mean Squared Error and Mean Absolute Error.
 
-## Install and run the project
-Install all dependencies from ```requirements.txt``` file and use anaconda environment.
-To create the same environment from the requirements file, you can use the following command:
+## Overview
+This repository presents a comprehensive case study on state-of-the-art feature extraction techniques for recommender systems. It implements and compares both machine learning (hybrid clustering) and deep learning (autoencoder-based) approaches for feature extraction, using the MovieLens-100K and MovieLens-1M datasets. The project includes code, data preparation scripts, and a detailed report evaluating model performance using standard metrics.
 
+## Table of Contents
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Datasets](#datasets)
+- [Usage](#usage)
+- [Results](#results)
+- [Contributing](#contributing)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
+
+## Project Structure
 ```
-$ conda create --name new_env --file requirements.txt
+CASE STUDY ON FEATURE EXTRACTION FOR RECOMMENDER SYSTEMS/
+├── 1. FEATURE EXTRACTION WITH DATA CLUSTERING/
+│   ├── COLLABORATIVE FILTERING/
+│   └── CONTENT BASED FILTERING/
+├── 2. DEEP AUTOENCODERS FOR FEATURE EXTRACTION/
+│   ├── 1. DATA PREPARATION/
+│   ├── 2. USER AUTOENCODER/
+│   ├── 3. ITEM AUTOENCODER/
+│   ├── 4. COLLABORATIVE FILTERING/
+│   ├── 5. AUTOENCODER COLLABORATIVE FILTERING/
+│   └── MODULE/
+│   └── README.md
+└── FINAL REPORT.pdf
 ```
-This will create a new conda environment called ```my_env``` and install all the packages from the requirements.text file
+- **1. FEATURE EXTRACTION WITH DATA CLUSTERING/**: Implements hybrid machine learning approaches (clustering, collaborative filtering, content-based filtering).
+- **2. DEEP AUTOENCODERS FOR FEATURE EXTRACTION/**: Implements deep learning approaches using autoencoders for user/item embeddings and collaborative filtering.
+- **FINAL REPORT.pdf**: Contains the detailed case study and results.
+
+## Installation
+1. Clone this repository:
+   ```
+   git clone <repo-url>
+   cd feature_extraction_in_recommender_systems
+   ```
+2. Install dependencies using Anaconda:
+   ```
+   conda create --name recsys_env --file requirements.txt
+   conda activate recsys_env
+   ```
 
 ## Datasets
-The datasets used in this project is ```MovieLens-100K``` and ```MovieLens-1M``` obtained from https://grouplens.org/datasets/movielens/
+The project uses the following datasets from [GroupLens](https://grouplens.org/datasets/movielens/):
+- [MovieLens-100K](https://files.grouplens.org/datasets/movielens/ml-100k.zip): Used in machine learning models
+- [MovieLens-1M](https://files.grouplens.org/datasets/movielens/ml-1m.zip): Used in deep learning models
 
-  - [MovieLens-100K](https://files.grouplens.org/datasets/movielens/ml-100k.zip): Dataset used in Machine Learning proposed model
-  - [MovieLens-1M](https://files.grouplens.org/datasets/movielens/ml-1m.zip): Dataset used in Deep Learning Neural Network model 
+Download and extract the datasets as required by the scripts in each module.
 
-## Data preparation
-Proposed Deep Learning Model utilizes users and items data. The corresponding data prepared pickle file for downloads can be found here:
-  - [UsersData](https://drive.google.com/file/d/1zdAGWRK4LY1f0FpladJBjWHbozmYbd-8/view?usp=share_link) Data preparation pickle file for user autoenocder
-  - [MoviesData](https://drive.google.com/file/d/1B2uOP7YZYpPkP7pJOTRtGR5pdlB5kJlG/view?usp=share_link) Data preparation pickle file for item autoencoder
-  
-## Project file description
-  - [Hybrid Approach for Feature Extraction in Recommender systems](https://github.com/ISG-Siegen/SA_Sagar_Sirbi/tree/main/CASE%20STUDY%20ON%20FEATURE%20EXTRACTION%20FOR%20RECOMMENDER%20SYSTEMS/1.%20FEATURE%20EXTRACTION%20WITH%20DATA%20CLUSTERING) for machine learning model approach.
-  - [Deep Autoencoders for Feature Extraction with Embeddings in Recommender Systems](https://github.com/ISG-Siegen/SA_Sagar_Sirbi/tree/main/CASE%20STUDY%20ON%20FEATURE%20EXTRACTION%20FOR%20RECOMMENDER%20SYSTEMS/2.%20DEEP%20AUTOENCODERS%20FOR%20FEATURE%20EXTRACTION) for deep learning model approach.
+### Data Preparation
+For deep learning models, preprocessed pickle files are required:
+- [UsersData](https://drive.google.com/file/d/1zdAGWRK4LY1f0FpladJBjWHbozmYbd-8/view?usp=share_link): For user autoencoder
+- [MoviesData](https://drive.google.com/file/d/1B2uOP7YZYpPkP7pJOTRtGR5pdlB5kJlG/view?usp=share_link): For item autoencoder
+
+## Usage
+- **Hybrid Machine Learning Approach:**
+  - See `CASE STUDY ON FEATURE EXTRACTION FOR RECOMMENDER SYSTEMS/1. FEATURE EXTRACTION WITH DATA CLUSTERING/` for scripts and instructions on running clustering, collaborative, and content-based filtering models.
+- **Deep Learning Autoencoder Approach:**
+  - See `CASE STUDY ON FEATURE EXTRACTION FOR RECOMMENDER SYSTEMS/2. DEEP AUTOENCODERS FOR FEATURE EXTRACTION/README.md` for detailed instructions on running autoencoder-based models for user/item embeddings and collaborative filtering.
+
+Typical steps:
+1. Prepare the datasets and required pickle files.
+2. Run the data preparation scripts.
+3. Train and evaluate the models as described in the respective module directories.
+
+## Results
+- The project evaluates models using Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE).
+- Experiments are conducted on datasets of varying sparsity (MovieLens-100K and 1M).
+- See `FINAL REPORT.pdf` for a detailed analysis and comparison of all approaches.
+
+## Contributing
+Contributions, issues, and feature requests are welcome! Please open an issue or submit a pull request.
 
 ## Author
-This project was created by
-  - Sagar K Sirbi (sagar.sirbi@student.uni-siegen.de)
+Created by Sagar K Sirbi (sagar.sirbi@student.uni-siegen.de)
 
-If you have any questions or feedback about the project, please feel free to contact me via e-mail.
-
-## Acknowledgement
-I would like to thank the following individuals and organizations for their contibutions in this project:
-  - Mr. Lukas Wegmeth, for providing valuable feedback and suggestions throughout the development process.
-  - Prof. Dr-ing. Joeran Beel for creating opportunites for studienarbeit at the University.
-  - Kirana Rama, Pradeep Kumar, Bharat Bhasker and Andreea Salinca for their valuable research contributions and providing a strong foundation for my research.
-  - University of Siegen, for providing support and resources for this research project.
-
-I am grateful for the support and assistance that I have received, and I would not have been able to complete this project without the help of these individuals and organizations.
+## Acknowledgements
+- Mr. Lukas Wegmeth, for valuable feedback and suggestions.
+- Prof. Dr-ing. Joeran Beel, for research opportunities at University of Siegen.
+- Kirana Rama, Pradeep Kumar, Bharat Bhasker, and Andreea Salinca for foundational research.
+- University of Siegen, for support and resources.
