@@ -79,25 +79,8 @@ Typical workflow:
 ## Results
 - Models are evaluated using RMSE and MAE.
 - Experiments are conducted on MovieLens-100K and 1M datasets.
-- See `FINAL_REPORT.pdf` for a detailed analysis and comparison.
+- See `final_report.pdf` for a detailed analysis and comparison.
 
 ## Contributing
 Contributions, issues, and feature requests are welcome! Please open an issue or submit a pull request.
 
-## License
-Specify your license here (e.g., MIT, Apache 2.0, etc.).
-
-## Citation
-If you use this repository for your research, please cite:
-```
-@misc{feature_extraction_recsys,
-  author = {Sagar K Sirbi},
-  title = {Feature Extraction in Recommender Systems},
-  year = {2023},
-  howpublished = {GitHub},
-  url = {https://github.com/your-repo-url}
-}
-```
-
-## Contact
-Created by Sagar K Sirbi (sagar.sirbi@student.uni-siegen.de)
