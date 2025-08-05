@@ -12,9 +12,6 @@ A professional, research-driven repository for state-of-the-art feature extracti
 - [Usage](#usage)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
-- [Citation](#citation)
-- [Contact](#contact)
 
 ---
 
